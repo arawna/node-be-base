@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "980ba2c1-d8d9-4478-bc78-c3ecafe424ba",
+		"name": "Node-be-base",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15787745"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Category List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/categories",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"kategori 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/categories/add",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"66bcbc8a2be3d5b8aa7e5a14\",\r\n    \"is_active\": true,\r\n    \"name\": \"kategori 1 updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/categories/update",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"66bcbc8a2be3d5b8aa7e5a14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/categories/delete",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Role List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/roles",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role_name\": \"Admin1\",\r\n    \"permissions\": [\r\n        \"user_view\",\r\n        \"user_add\",\r\n        \"user_update\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/roles/add",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"66be8d15b2d6b0a5d623df6a\",\r\n    \"role_name\": \"Admin1\",\r\n    \"is_active\": false,\r\n    \"permissions\": [\r\n        \"user_view\",\r\n        \"user_add\",\r\n        \"role_update\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/roles/update",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"66be8d15b2d6b0a5d623df6a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/roles/delete",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Role Privs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/roles/role_privileges",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								"role_privileges"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3000"
+		}
+	]
+}
