@@ -175,11 +175,21 @@
 				{
 					"name": "Update Role",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjY2YmVhNWFhNmNiNjAzZDE5ZmIyYjA5MyIsImV4cCI6MTQ4OTM5Mzc4MzIxOTY4fQ.hnxx0E7whHsQeoacET9dK8iXkiG_rp0E_lTvd1rstGs",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"_id\": \"66be8d15b2d6b0a5d623df6a\",\r\n    \"role_name\": \"Admin1\",\r\n    \"is_active\": false,\r\n    \"permissions\": [\r\n        \"user_view\",\r\n        \"user_add\",\r\n        \"role_update\"\r\n    ]\r\n}",
+							"raw": "{\r\n    \"_id\": \"66bea5aa6cb603d19fb2b095\",\r\n    \"role_name\": \"SUPER_ADMIN\",\r\n    \"is_active\": true,\r\n    \"permissions\": [\r\n        \"user_view\",\r\n        \"user_add\",\r\n        \"user_update\",\r\n        \"user_delete\",\r\n        \"role_view\",\r\n        \"role_add\",\r\n        \"role_update\",\r\n        \"role_delete\",\r\n        \"category_view\",\r\n        \"category_add\",\r\n        \"category_update\",\r\n        \"category_delete\",\r\n        \"auditlogs_view\"\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -255,6 +265,16 @@
 				{
 					"name": "User List",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjY2YmVhNWFhNmNiNjAzZDE5ZmIyYjA5MyIsImV4cCI6MTQ4OTM5MzM5Njg1MzU2fQ.qYBd0Mr4mEG65dtofqh3OvOHEyvMIr0jzbBIzBq5h-E",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {

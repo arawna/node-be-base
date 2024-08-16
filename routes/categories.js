@@ -13,7 +13,7 @@ router.all("*",auth.authenticate(), (req,res,next) => {
 })
 
 
-router.get("/", async (req, res) => {
+router.get("/",auth.checkRoles("category_view"), async (req, res) => {
 
     try {
         let categories = await Categories.find({})
@@ -25,7 +25,7 @@ router.get("/", async (req, res) => {
     }
 })
 
-router.post("/add", async (req, res) => {
+router.post("/add",auth.checkRoles("category_add"), async (req, res) => {
     let body = req.body;
     try {
         if(!body.name) throw new CustomError(Enum.HTTP_CODES.BAD_REQUEST,"Validation Error!","name field must be filled");
@@ -50,7 +50,7 @@ router.post("/add", async (req, res) => {
     }
 })
 
-router.post("/update", async (req,res) => {
+router.post("/update",auth.checkRoles("category_update"), async (req,res) => {
     let body = req.body;
     try {
 
@@ -73,7 +73,7 @@ router.post("/update", async (req,res) => {
     }
 })
 
-router.post("/delete", async (req,res) => {
+router.post("/delete",auth.checkRoles("category_delete"), async (req,res) => {
     let body = req.body;
 
     try {
