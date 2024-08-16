@@ -141,7 +141,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"role_name\": \"Admin1\",\r\n    \"permissions\": [\r\n        \"user_view\",\r\n        \"user_add\",\r\n        \"user_update\"\r\n    ]\r\n}",
+							"raw": "{\r\n    \"role_name\": \"Admin2\",\r\n    \"permissions\": [\r\n        \"user_view\",\r\n        \"user_add\",\r\n        \"user_update\"\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -232,6 +232,141 @@
 								"api",
 								"roles",
 								"role_privileges"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin2@test.com\",\r\n    \"password\":\"123456789\",\r\n    \"first_name\": \"Ali\",\r\n    \"last_name\": \"Hocaoglu\",\r\n    \"phone_number\": \"05555555555\",\r\n    \"roles\": [\r\n        \"66bea3e112fba0207132513f\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/add",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"66bea5d96cb603d19fb2b09c\",\r\n    \"password\":\"ali123\",\r\n    \"first_name\": \"Ali1\",\r\n    \"last_name\": \"Hocaoglu1\",\r\n    \"phone_number\": \"05555555555\",\r\n    \"roles\": [\r\n        \"66bea62e6cb603d19fb2b0a0\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/update",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"66bea5d96cb603d19fb2b09c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/delete",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@test.com\",\r\n    \"password\":\"123456789\",\r\n    \"first_name\": \"Ali\",\r\n    \"last_name\": \"Hocaoglu\",\r\n    \"phone_number\": \"05555555555\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
 							]
 						}
 					},
