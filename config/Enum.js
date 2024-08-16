@@ -20,5 +20,13 @@ module.exports = {
         BAD_GATEWAY: 502
     },
     PASS_LENGTH: 8,
-    SUPER_ADMIN: "SUPER_ADMIN"
+    SUPER_ADMIN: "SUPER_ADMIN",
+    LOG_LEVELS: {
+        "INFO":"INFO",
+        "WARN":"WARN",
+        "ERROR":"ERROR",
+        "DEBUG":"DEBUG",
+        "VERBOSE":"VERBOSE",
+        "HTTP":"HTTP"
+    }
 }

@@ -34,7 +34,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"kategori 1\"\r\n}",
+							"raw": "{\r\n    \"name\": \"kategori 4\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -62,7 +62,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"_id\": \"66bcbc8a2be3d5b8aa7e5a14\",\r\n    \"is_active\": true,\r\n    \"name\": \"kategori 1 updated\"\r\n}",
+							"raw": "{\r\n    \"_id\": \"66bf2cdb40ed511780c63985\",\r\n    \"is_active\": true,\r\n    \"name\": \"kategori 3 updated\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -289,6 +289,34 @@
 					"response": []
 				},
 				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@test.com\",\r\n    \"password\":\"123456789\",\r\n    \"first_name\": \"Ali\",\r\n    \"last_name\": \"Hocaoglu\",\r\n    \"phone_number\": \"05555555555\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Update User",
 					"request": {
 						"method": "POST",
@@ -343,36 +371,35 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "Register",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"admin@test.com\",\r\n    \"password\":\"123456789\",\r\n    \"first_name\": \"Ali\",\r\n    \"last_name\": \"Hocaoglu\",\r\n    \"phone_number\": \"05555555555\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{URL}}/api/users/register",
-							"host": [
-								"{{URL}}"
-							],
-							"path": [
-								"api",
-								"users",
-								"register"
-							]
-						}
-					},
-					"response": []
 				}
 			]
+		},
+		{
+			"name": "AuditLogs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/auditlogs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"auditlogs"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"variable": [
