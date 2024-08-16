@@ -30,11 +30,21 @@
 				{
 					"name": "Add Category",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjY2YmVhNWFhNmNiNjAzZDE5ZmIyYjA5MyIsImV4cCI6MTQ4OTM5MjAwOTI5MjAzfQ.OaSgC6wkZBToshhV-sjh6g-I6-n_sNjV4VOrNLg0LQE",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"kategori 4\"\r\n}",
+							"raw": "{\r\n    \"name\": \"kategori 5\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -405,6 +415,16 @@
 		{
 			"name": "AuditLogs",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjY2YmVhNWFhNmNiNjAzZDE5ZmIyYjA5MyIsImV4cCI6MTQ4OTM5MTg0MTI5NTAwfQ.c-ra0ZFYpPwcvntKEBc1_3GSC6yT8p_84F1w3yinevs",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
